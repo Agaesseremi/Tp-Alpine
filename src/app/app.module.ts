@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { StoreModule } from '@ngrx/store';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { ConfigAlpineBarComponent } from './components/config-alpine-bar/config-alpine-bar.component';
+import { ChoiceBarComponent } from './components/choice-bar/choice-bar.component';
+import { ChoiceCardComponent } from './components/choice-card/choice-card.component';
 
 
 @NgModule({
@@ -13,6 +15,8 @@ import { ConfigAlpineBarComponent } from './components/config-alpine-bar/config-
     AppComponent,
     NavBarComponent,
     ConfigAlpineBarComponent,
+    ChoiceBarComponent,
+    ChoiceCardComponent,
 
   ],
   imports: [
