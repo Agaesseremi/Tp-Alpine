@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { AlpineState } from 'src/app/reducer/reducer';
+import { IAlpineState } from 'src/app/reducer/reducer';
 
 @Component({
   selector: 'app-view-image-comperator',
@@ -10,10 +10,10 @@ import { AlpineState } from 'src/app/reducer/reducer';
 export class ViewImageComperatorComponent implements OnInit {
   viewImage = "";
 
-  constructor(private store: Store<{ alpine: AlpineState }>) { }
+  constructor(private store: Store<{ alpine: IAlpineState }>) { }
 
   ngOnInit(): void {
-    this.store.select(state => state.alpine).subscribe((alpinestate: AlpineState) => {
+    this.store.select(state => state.alpine).subscribe((alpinestate: IAlpineState) => {
 
       this.viewImage = alpinestate.viewImage;
 
