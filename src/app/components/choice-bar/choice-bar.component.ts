@@ -1,9 +1,7 @@
 import { Component, Output } from '@angular/core';
 import { alpineConfigJson } from '../../alpine-config/alpine-config.module';
 
-interface Options {
-  [key: string]: { photoId: string; name: string; subcategories?: { photoId: string; name: string; basePrice: number }[] }[];
-}
+
 
 @Component({
   selector: 'app-choice-bar',
@@ -11,18 +9,28 @@ interface Options {
   styleUrls: ['./choice-bar.component.scss']
 })
 export class ChoiceBarComponent {
-  options: string[] = Object.keys(alpineConfigJson);
-  optionsToDisplay: Options = alpineConfigJson;
-  choiceToDisplay!: string;
-  displayCard!: any[];
+  json: any = alpineConfigJson;
+  displayCard!: any;
 
   ngOnInit() {
    
   }
 
   cardDisplay(test: string) {
-    this.choiceToDisplay = test;
-    this.displayCard = this.optionsToDisplay[this.choiceToDisplay];
+    switch(test){
+      case 'models':
+        this.displayCard = this.json.models;
+        break;
+      case 'colors':
+        this.displayCard = this.json.colors;
+        break;
+      case 'rim':
+        this.displayCard = this.json.legendeRims;
+        break;
+      case 'interior':
+        this.displayCard = this.json.legendeInteriors;
+        break;
+    }
     
     console.log(this);
   }
