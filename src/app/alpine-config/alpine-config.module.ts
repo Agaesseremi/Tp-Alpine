@@ -10,364 +10,508 @@ import { CommonModule } from '@angular/common';
   ]
 })
 export class AlpineConfigModule {
-  
+
 }
 
 export const alpineConfigJson =
-    {
-      "cars": [
-        {
-          "photoId": "pure",
-          "name": "Version Pure",
-          "basePrice": 54700
-        },
-        {
-          "photoId": "legende",
-          "name": "Version Legende",
-          "basePrice": 58500
-        }
-      ],
-      "colors": [
-        {
-          "photoId": "bleu",
-          "name": "Teinte Spéciale Bleu Alpine",
-          "basePrice": 1800
-        },
-        {
-          "photoId": "noir",
-          "name": "Teinte Métallisée Noir Profond",
-          "basePrice": 840
-        },
-        {
-          "photoId": "blanc",
-          "name": "Peinture Opaque Blanc Glacier",
-          "basePrice": 0
-        }
-      ],
+{
+  "modeleLegende": {
+    "id": 1,
+    "name": "A110 Legende",
+    "price": 54700,
+    "photoPath": "../../../assets/images/configurateur/modele/selection/legende.png",
+    "color": {
+      "name": "Peinture Opaque Blanc Glacier",
+      "photoPath": "../../../assets/images/configurateur/couleurs/selection/blanc.jpg",
+      "price": 0
+    },
+    "rims": {
+      "name": "Standard",
+      "photoPath": "../../../assets/images/configurateur/jantes/selection/jante-standard.jpg",
+      "price": 0
+    },
+    "interior": {
+      "name": "Sièges Confort en cuir noir",
+      "photoPath": "../../../assets/images/configurateur/interieurs/selection/cuir-noir.jpg",
+      "price": 0
+    },
+    "equipments": {
+      "Design": {},
+      "Media_et_navigation": {          
+          4: {
+            "photoPath": "../../../assets/images/configurateur/equipments/categories/media et navigation/audio-standard.jpg",
+            "name": "Système Audio Standard",
+            "price": 0
+          }
+        
+      },
+      "Confort": {
+          1: {
+            "name": "Retroviseur Intérieur Electrochrome",
+            "photoPath": "../../../assets/images/configurateur/equipments/categories/confort/retro-int-electrochrome.jpg",
+            "price": 0
+          },
+          4: {
+            "name": "Régulateur Limiteur de Vitesse",
+            "photoPath": "../../../assets/images/configurateur/equipments/categories/confort/regul-limit-vitesse.jpg",
+            "price": 0
+          }
+        
+      },
+      "Conduite": {},
+      "Sécurité": {
+          2: {
+            "name": "Assistance de Freinage d'Urgence",
+            "photoPath": "../../../assets/images/configurateur/equipments/categories/securite/aide-freinage-durgence.jpg",
+            "price": 0
+          },
+          3: {
+            "name": "Airbags Frontaux conducteur et passager",
+            "photoPath": "../../../assets/images/configurateur/equipments/categories/securite/airbag.jpg",
+            "price": 0
+          }
+        
+      },
+      "Personnalisation_Extérieure": {
+          3: {
+            "name": "Etriers de frein couleur Gris Anthracite",
+            "photoPath": "../../../assets/images/configurateur/equipments/categories/personnalisation exterieure/etrier-gris.jpg",
+            "price": 0
+          }
+        
+      },
+      "Personnalisation_Intérieure": {
+          2: {
+            "name": "Harmonie Carbone",
+            "photoPath": "../../../assets/images/configurateur/equipments/categories/personnalisation interieure/pack-carbone.jpeg",
+            "price": 0
+          },
+      }
+    },
+    "accessories": {
+      "Transport_et_Protection": {},
+      "Multimédia": {},
+      "Intérieur": {},
+      "Matériel_de_Garage": {},
+      "Extérieur": {}
+    }
+  },
 
-      "legendeRim": [
-        {
-          "photoId": "standard",
-          "name": "Standard",
-          "basePrice": 0
-        },
-        {
-          "photoId": "serac",
-          "name": "Serac",
-          "basePrice": 1000
-        },
-        {
-          "photoId": "legende",
-          "name": "Legende",
-          "basePrice": 0
-        }
-      ],
-      "legendeInterior": [
-        {
-          "photoId": "cuir-noir",
-          "name": "Sièges Confort en cuir noir",
-          "basePrice": 0
-        },
-        {
-          "photoId": "cuir-brun",
-          "name": "Sièges Confort en cuir brun",
-          "basePrice": 800
-        }
-      ],
-      "pureRim": [
-        {
-          "photoId": "standard",
-          "name": "Standard",
-          "basePrice": 0
-        },
-        {
-          "photoId": "serac",
-          "name": "Serac",
-          "basePrice": 1000
-        }
-      ],
-      "pureInterior": [
-        {
-          "photoId": "cuir-noir_dinamica",
-          "name": "Sièges Baquets en cuir noir et Dinamica",
-          "basePrice": 0
-        },
-        {
-          "photoId": "cuir-noir_perfore",
-          "name": "Sièges Confort en cuir noir perforé",
-          "basePrice": 800
-        }
-      ],
+  "modelePure": {
+    "id": 1,
+    "name": "A110 Pure",
+    "price": 54700,
+    "photoPath": "../../../assets/images/configurateur/modele/selection/pure.png",
+    "color": {
+      "name": "Peinture Opaque Blanc Glacier",
+      "photoPath": "../../../assets/images/configurateur/couleurs/selection/blanc.jpg",
+      "price": 0
+    },
+    "rims": {
+      "name": "Standard",
+      "photoPath": "../../../assets/images/configurateur/jantes/selection/jante-standard.jpg",
+      "price": 0
+    },
+    "interior": {
+      "name": "Sièges Baquets en cuir noir et Dinamica",
+      "photoPath": "../../../assets/images/configurateur/interieurs/selection/cuir-noir_dinamica.jpg",
+      "price": 0
+    },
+    "equipments": {
+      "Design": {},
+      "Media_et_navigation": {          
+          4: {
+            "photoPath": "../../../assets/images/configurateur/equipments/categories/media et navigation/audio-standard.jpg",
+            "name": "Système Audio Standard",
+            "price": 0
+          }
+        
+      },
+      "Confort": {
+          1: {
+            "name": "Retroviseur Intérieur Electrochrome",
+            "photoPath": "../../../assets/images/configurateur/equipments/categories/confort/retro-int-electrochrome.jpg",
+            "price": 0
+          },
+          4: {
+            "name": "Régulateur Limiteur de Vitesse",
+            "photoPath": "../../../assets/images/configurateur/equipments/categories/confort/regul-limit-vitesse.jpg",
+            "price": 0
+          }
+        
+      },
+      "Conduite": {},
+      "Sécurité": {
+          2: {
+            "name": "Assistance de Freinage d'Urgence",
+            "photoPath": "../../../assets/images/configurateur/equipments/categories/securite/aide-freinage-durgence.jpg",
+            "price": 0
+          },
+          3: {
+            "name": "Airbags Frontaux conducteur et passager",
+            "photoPath": "../../../assets/images/configurateur/equipments/categories/securite/airbag.jpg",
+            "price": 0
+          }
+        
+      },
+      "Personnalisation_Extérieure": {
+          3: {
+            "name": "Etriers de frein couleur Gris Anthracite",
+            "photoPath": "../../../assets/images/configurateur/equipments/categories/personnalisation exterieure/etrier-gris.jpg",
+            "price": 0
+          }
+        
+      },
+      "Personnalisation_Intérieure": {
+          2: {
+            "name": "Harmonie Carbone",
+            "photoPath": "../../../assets/images/configurateur/equipments/categories/personnalisation interieure/pack-carbone.jpeg",
+            "price": 0
+          },
+      }
+    },
+    "accessories": {
+      "Transport_et_Protection": {},
+      "Multimédia": {},
+      "Intérieur": {},
+      "Matériel_de_Garage": {},
+      "Extérieur": {}
+    }
+  },
 
-      "equipment": [
-        {
-          "photoId": "design",
-          "name": "Design",
-          "subcategories": [
-            {
-              "photoId": "pack-heritage",
-              "name": "Pack héritage",
-              "basePrice": 180
-            },
-            {
-              "photoId": "repose-pied-alu",
-              "name": "Repose-pieds passager en aluminium",
-              "basePrice": 96
-            }
-          ]
+
+  "models": {
+    1: {
+      "name": "Version Pure",
+      "photoPath": "../../../assets/images/configurateur/modele/selection/pure.png",
+      "price": 54700
+    },
+    2: {
+      "name": "Version Legende",
+      "photoPath": "../../../assets/images/configurateur/modele/selection/legende.png",
+      "price": 58500
+    }
+  },
+  "colors": {
+    1: {
+      "name": "Teinte Spéciale Bleu Alpine",
+      "photoPath": "../../../assets/images/configurateur/couleurs/selection/bleu.jpg",
+      "price": 1800
+    },
+    2: {
+      "name": "Teinte Métallisée Noir Profond",
+      "photoPath": "../../../assets/images/configurateur/couleurs/selection/noir.jpg",
+      "price": 840
+    },
+    3: {
+      "name": "Peinture Opaque Blanc Glacier",
+      "photoPath": "../../../assets/images/configurateur/couleurs/selection/blanc.jpg",
+      "price": 0
+    }
+  },
+
+
+  "legendeRims": {
+    1: {
+      "name": "Standard",
+      "photoPath": "../../../assets/images/configurateur/jantes/selection/jante-standard.jpg",
+      "price": 0
+    },
+    2: {
+      "name": "Serac",
+      "photoPath": "../../../assets/images/configurateur/jantes/selection/jante-serac.jpg",
+      "price": 1000
+    },
+    3: {
+      "name": "Legende",
+      "photoPath": "../../../assets/images/configurateur/jantes/selection/jante-legende.jpg",
+      "price": 0
+    }
+  },
+  "legendeInteriors": {
+    1: {
+      "name": "Sièges Confort en cuir noir",
+      "photoPath": "../../../assets/images/configurateur/interieurs/selection/cuir-noir.jpg",
+      "price": 0
+    },
+    2: {
+      "name": "Sièges Confort en cuir brun",
+      "photoPath": "../../../assets/images/configurateur/interieurs/selection/cuir-brun.jpg",
+      "price": 800
+    }
+  },
+  "pureRims": {
+    1: {
+      "name": "Standard",
+      "photoPath": "../../../assets/images/configurateur/jantes/selection/jante-standard.jpg",
+      "price": 0
+    },
+    2: {
+      "name": "Serac",
+      "photoPath": "../../../assets/images/configurateur/jantes/selection/jante-serac.jpg",
+      "price": 1000
+    }
+  },
+  "pureInteriors": {
+    1: {
+      "name": "Sièges Baquets en cuir noir et Dinamica",
+      "photoPath": "../../../assets/images/configurateur/interieurs/selection/cuir-noir_dinamica.jpg",
+      "price": 0
+    },
+    2: {
+      "name": "Sièges Confort en cuir noir perforé",
+      "photoPath": "../../../assets/images/configurateur/interieurs/selection/cuir-noir_perfore.jpg",
+      "price": 800
+    }
+  },
+
+  "equipments": {
+    "Design": {
+      "photoPath": "../../../assets/images/configurateur/equipments/selection/design.jpg",
+      "subcategories": {
+        1: {
+          "name": "Pack héritage",
+          "photoPath": "../../../assets/images/configurateur/equipments/categories/design/pack-heritage.jpg",
+          "price": 180
         },
-        {
-          "photoId": "media-nav",
-          "name": "Media et navigation",
-          "subcategories": [
-            {
-              "photoId": "alpine-metrics",
-              "name": "Alpine Télémétrics",
-              "basePrice": 204
-            },
-            {
-              "photoId": "audio-focal",
-              "name": "Système Audio Focal",
-              "basePrice": 600
-            },
-            {
-              "photoId": "audio-premium",
-              "name": "Système Audio Focal Premium",
-              "basePrice": 1200
-            },
-            {
-              "photoId": "audio-standard",
-              "name": "Système Audio Standard",
-              "basePrice": 0
-            }
-          ]
-        },
-        {
-          "photoId": "confort",
-          "name": "Confort",
-          "subcategories": [
-            {
-              "photoId": "retro-int-electrochrome",
-              "name": "Retroviseur Intérieur Electrochrome",
-              "basePrice": 0
-            },
-            {
-              "photoId": "retro-ext-chaffant",
-              "name": "Rétroviseurs extérieurs Chauf. Rabattables Electriques",
-              "basePrice": 504
-            },
-            {
-              "photoId": "pack-rangement",
-              "name": "Pack de rangement",
-              "basePrice": 504
-            },
-            {
-              "photoId": "regul-limit-vitesse",
-              "name": "Régulateur Limiteur de Vitesse",
-              "basePrice": 0
-            }
-          ]
-        },
-        {
-          "photoId": "conduite",
-          "name": "Conduite",
-          "subcategories": [
-            {
-              "photoId": "aide-stationnement-ar",
-              "name": "Aide au Stationnement AR",
-              "basePrice": 420
-            },
-            {
-              "photoId": "aide-stationnement-av-ar",
-              "name": "Aide au Stationnement AV et AR",
-              "basePrice": 750
-            },
-            {
-              "photoId": "camera-recul",
-              "name": "Aide au Stationnement AV AR et caméra de recul",
-              "basePrice": 1200
-            },
-            {
-              "photoId": "echappement-sport",
-              "name": "Echappement Sport Actif",
-              "basePrice": 1500
-            }
-          ]
-        },
-        {
-          "photoId": "securite",
-          "name": "Sécurité",
-          "subcategories": [
-            {
-              "photoId": "freinage-haute-perf",
-              "name": "Système de Freinage Haute-Performance 320mm",
-              "basePrice": 1000
-            },
-            {
-              "photoId": "aide-freinage-durgence",
-              "name": "Assistance de Freinage d'Urgence",
-              "basePrice": 0
-            },
-            {
-              "photoId": "airbag",
-              "name": "Airbags Frontaux conducteur et passager",
-              "basePrice": 0
-            }
-          ]
-        },
-        {
-          "photoId": "perso-ext",
-          "name": "Personnalisation Extérieure",
-          "subcategories": [
-            {
-              "photoId": "etrier-bleu",
-              "name": "Etriers de frein couleur Bleu Alpine",
-              "basePrice": 384
-            },
-            {
-              "photoId": "logo-alpine",
-              "name": "Logo Alpine",
-              "basePrice": 120
-            },
-            {
-              "photoId": "etrier-gris",
-              "name": "Etriers de frein couleur Gris Anthracite",
-              "basePrice": 0
-            }
-          ]
-        },
-        {
-          "photoId": "perso-int",
-          "name": "Personnalisation Intérieure",
-          "subcategories": [
-            {
-              "photoId": "pedal-alu",
-              "name": "Pédalier en aluminium",
-              "basePrice": 120
-            },
-            {
-              "photoId": "pack-carbone",
-              "name": "Harmonie Carbone",
-              "basePrice": 0
-            },
-            {
-              "photoId": "logo-volant",
-              "name": "Logo au centre du volant en Bleu Alpine",
-              "basePrice": 84
-            },
-            {
-              "photoId": "siege-chauffant",
-              "name": "Sièges Chauffants",
-              "basePrice": 400
-            }
-          ]
+        2: {
+          "name": "Repose-pieds passager en aluminium",
+          "photoPath": "../../../assets/images/configurateur/equipments/categories/design/repose-pied-alu.jpg",
+          "price": 96
         }
-      ],
-      "accessory": [
-        {
-          "photoId": "transport-et-protection",
-          "name": "Transport et Protection",
-          "subcategories": [
-            {
-              "photoId": "extincteur",
-              "name": "Extincteur 1kg avec manomètre",
-              "basePrice": 22
-            },
-            {
-              "photoId": "chaaine-neige",
-              "name": "Chaîne à neige Premium Grip",
-              "basePrice": 336
-            },
-            {
-              "photoId": "alarme",
-              "name": "Alarme",
-              "basePrice": 543
-            },
-            {
-              "photoId": "protection-obd",
-              "name": "Protection Prise OBD",
-              "basePrice": 99
-            },
-            {
-              "photoId": "kit-securite",
-              "name": "Kit de Sécurité",
-              "basePrice": 20
-            },
-            {
-              "photoId": "fixation-extincteur",
-              "name": "Fixation Extincteur",
-              "basePrice": 72
-            }
-          ]
+      }
+    },
+    "Media_et_navigation": {
+      "photoPath": "../../../assets/images/configurateur/equipments/selection/media-nav.jpg",
+      "subcategories": {
+        1: {
+          "name": "Alpine Télémétrics",
+          "photoPath": "../../../assets/images/configurateur/equipments/categories/media et navigation/alpine-metrics.jpg",
+          "price": 204
         },
-        {
-          "photoId": "multimedia",
-          "name": "Multimédia",
-          "subcategories": [
-            {
-              "photoId": "support-camera",
-              "name": "Support Caméra Sport",
-              "basePrice": 89
-            },
-            {
-              "photoId": "support-smartphone",
-              "name": "Support Smartphone Magnétique - Fixation sur Tableau de bord",
-              "basePrice": 21
-            }
-          ]
+        2: {
+          "name": "Système Audio Focal",
+          "photoPath": "../../../assets/images/configurateur/equipments/categories/media et navigation/audio-focal.jpg",
+          "price": 600
         },
-        {
-          "photoId": "interieur",
-          "name": "Intérieur",
-          "subcategories": [
-            {
-              "photoId": "tapis-coffre",
-              "name": "Tapis de Coffre",
-              "basePrice": 83
-            },
-            {
-              "photoId": "filet-rangement",
-              "name": "Filet de Rangement Horizontal",
-              "basePrice": 59
-            }
-          ]
+        3: {
+          "name": "Système Audio Focal Premium",
+          "photoPath": "../../../assets/images/configurateur/equipments/categories/media et navigation/audio-premium.jpg",
+          "price": 1200
         },
-        {
-          "photoId": "garage",
-          "name": "Matériel de Garage",
-          "subcategories": [
-            {
-              "photoId": "chargeur-batterie",
-              "name": "Chargeur de Batterie",
-              "basePrice": 240
-            },
-            {
-              "photoId": "kit-outils",
-              "name": "Kit Outils Alpine",
-              "basePrice": 398
-            }
-          ]
-        },
-        {
-          "photoId": "exterieur",
-          "name": "Extérieur",
-          "subcategories": [
-            {
-              "photoId": "cabochons-metal",
-              "name": "Cabochons Alpine-Métallisés",
-              "basePrice": 24
-            },
-            {
-              "photoId": "housse",
-              "name": "Housse de Protection Alpine",
-              "basePrice": 216
-            },
-            {
-              "photoId": "antivol-jantes",
-              "name": "Antivols pour jantes-Noirs",
-              "basePrice": 51
-            }
-          ]
+        4: {
+          "photoPath": "../../../assets/images/configurateur/equipments/categories/media et navigation/audio-standard.jpg",
+          "name": "Système Audio Standard",
+          "price": 0
         }
-      ]
-    };
+      }
+    },
+    "Confort": {
+      "photoPath": "../../../assets/images/configurateur/equipments/selection/confort.jpg",
+      "subcategories": {
+        1: {
+          "name": "Retroviseur Intérieur Electrochrome",
+          "photoPath": "../../../assets/images/configurateur/equipments/categories/confort/retro-int-electrochrome.jpg",
+          "price": 0
+        },
+        2: {
+          "name": "Rétroviseurs extérieurs Chauf. Rabattables Electriques",
+          "photoPath": "../../../assets/images/configurateur/equipments/categories/confort/retro-ext-chaffant.jpg",
+          "price": 504
+        },
+        3: {
+          "name": "Pack de rangement",
+          "photoPath": "../../../assets/images/configurateur/equipments/categories/confort/pack-rangement.jpg",
+          "price": 504
+        },
+        4: {
+          "name": "Régulateur Limiteur de Vitesse",
+          "photoPath": "../../../assets/images/configurateur/equipments/categories/confort/regul-limit-vitesse.jpg",
+          "price": 0
+        }
+      }
+    },
+    "Conduite": {
+      "photoPath": "../../../assets/images/configurateur/equipments/selection/conduite.jpg",
+      "subcategories": {
+        1: {
+          "name": "Aide au Stationnement AR",
+          "photoPath": "../../../assets/images/configurateur/equipments/categories/conduite/aide-stationnement-ar.jpg",
+          "price": 420
+        },
+        2: {
+          "name": "Aide au Stationnement AV et AR",
+          "photoPath": "../../../assets/images/configurateur/equipments/categories/conduite/aide-stationnement-av-ar.jpg",
+          "price": 750
+        },
+        3: {
+          "name": "Aide au Stationnement AV AR et caméra de recul",
+          "photoPath": "../../../assets/images/configurateur/equipments/categories/conduite/camera-recul.jpg",
+          "price": 1200
+        },
+        4: {
+          "name": "Echappement Sport Actif",
+          "photoPath": "../../../assets/images/configurateur/equipments/categories/conduite/echappement-sport.jpg",
+          "price": 1500
+        }
+      }
+    },
+    "Sécurité": {
+      "photoPath": "../../../assets/images/configurateur/equipments/selection/securite.jpg",
+      "subcategories": {
+        1: {
+          "name": "Système de Freinage Haute-Performance 320mm",
+          "photoPath": "../../../assets/images/configurateur/equipments/categories/securite/freinage-haute-perf.jpg",
+          "price": 1000
+        },
+        2: {
+          "name": "Assistance de Freinage d'Urgence",
+          "photoPath": "../../../assets/images/configurateur/equipments/categories/securite/aide-freinage-durgence.jpg",
+          "price": 0
+        },
+        3: {
+          "name": "Airbags Frontaux conducteur et passager",
+          "photoPath": "../../../assets/images/configurateur/equipments/categories/securite/airbag.jpg",
+          "price": 0
+        }
+      }
+    },
+    "Personnalisation_Extérieure": {
+      "photoPath": "../../../assets/images/configurateur/equipments/selection/perso-ext.jpg",
+      "subcategories": {
+        1: {
+          "name": "Etriers de frein couleur Bleu Alpine",
+          "photoPath": "../../../assets/images/configurateur/equipments/categories/personnalisation exterieure/etrier-bleu.jpg",
+          "price": 384
+        },
+        2: {
+          "name": "Logo Alpine",
+          "photoPath": "../../../assets/images/configurateur/equipments/categories/personnalisation exterieure/logo-alpine.jpg",
+          "price": 120
+        },
+        3: {
+          "name": "Etriers de frein couleur Gris Anthracite",
+          "photoPath": "../../../assets/images/configurateur/equipments/categories/personnalisation exterieure/etrier-gris.jpg",
+          "price": 0
+        }
+      }
+    },
+    "Personnalisation_Intérieure": {
+      "photoPath": "../../../assets/images/configurateur/equipments/selection/perso-int.jpg",
+      "subcategories": {
+        1: {
+          "name": "Pédalier en aluminium",
+          "photoPath": "../../../assets/images/configurateur/equipments/categories/personnalisation interieure/pedal-alu.jpeg",
+          "price": 120
+        },
+        2: {
+          "name": "Harmonie Carbone",
+          "photoPath": "../../../assets/images/configurateur/equipments/categories/personnalisation interieure/pack-carbone.jpeg",
+          "price": 0
+        },
+        3: {
+          "name": "Logo au centre du volant en Bleu Alpine",
+          "photoPath": "../../../assets/images/configurateur/equipments/categories/personnalisation interieure/logo-volant.jpeg",
+          "price": 84
+        },
+        4: {
+          "name": "Sièges Chauffants",
+          "photoPath": "../../../assets/images/configurateur/equipments/categories/personnalisation interieure/siege-chauffant.jpeg",
+          "price": 400
+        }
+      }
+    }
+  },
+  "accessories": {
+    "Transport_et_Protection": {
+      1: {
+        "name": "Extincteur 1kg avec manomètre",
+        "photoPath": "../../../assets/images/configurateur/accessoires/transport et protection/extincteur.jpg",
+        "price": 22
+      },
+      2: {
+        "name": "Chaîne à neige Premium Grip",
+        "photoPath": "../../../assets/images/configurateur/accessoires/transport et protection/chaaine-neige.jpg",
+        "price": 336
+      },
+      3: {
+        "name": "Alarme",
+        "photoPath": "../../../assets/images/configurateur/accessoires/transport et protection/alarme.jpg",
+        "price": 543
+      },
+      4: {
+        "photoPath": "../../../assets/images/configurateur/accessoires/transport et protection/protection-obd.jpg",
+        "name": "Protection Prise OBD",
+        "price": 99
+      },
+      5: {
+        "name": "Kit de Sécurité",
+        "photoPath": "../../../assets/images/configurateur/accessoires/transport et protection/kit-securite.jpg",
+        "price": 20
+      },
+      6: {
+        "name": "Fixation Extincteur",
+        "photoPath": "../../../assets/images/configurateur/accessoires/transport et protection/fixation-extincteur.jpg",
+        "price": 72
+      }
+
+    },
+    "Multimédia": {
+      1: {
+        "name": "Support Caméra Sport",
+        "photoPath": "../../../assets/images/configurateur/accessoires/multimedia/support-camera.jpg",
+        "price": 89
+      },
+      2: {
+        "name": "Support Smartphone Magnétique - Fixation sur Tableau de bord",
+        "photoPath": "../../../assets/images/configurateur/accessoires/multimedia/support-smartphone.jpg",
+        "price": 21
+      }
+
+    },
+    "Intérieur": {
+      1: {
+        "name": "Tapis de Coffre",
+        "photoPath": "../../../assets/images/configurateur/accessoires/interieur/tapis-coffre.jpg",
+        "price": 83
+      },
+      2: {
+        "name": "Filet de Rangement Horizontal",
+        "photoPath": "../../../assets/images/configurateur/accessoires/interieur/filet-rangement.jpg",
+        "price": 59
+      }
+
+    },
+    "Matériel_de_Garage": {
+      1: {
+        "name": "Chargeur de Batterie",
+        "photoPath": "../../../assets/images/configurateur/accessoires/garage/chargeur-batterie.jpg",
+        "price": 240
+      },
+      2: {
+        "name": "Kit Outils Alpine",
+        "photoPath": "../../../assets/images/configurateur/accessoires/garage/kit-outils.jpg",
+        "price": 398
+      }
+
+    },
+    "Extérieur": {
+      1: {
+        "name": "Cabochons Alpine-Métallisés",
+        "photoPath": "../../../assets/images/configurateur/accessoires/exterieur/cabochons-metal.jpg",
+        "price": 24
+      },
+      2: {
+        "name": "Housse de Protection Alpine",
+        "photoPath": "../../../assets/images/configurateur/accessoires/exterieur/housse.jpg",
+        "price": 216
+      },
+      3: {
+        "name": "Antivols pour jantes-Noirs",
+        "photoPath": "../../../assets/images/configurateur/accessoires/exterieur/antivol-jantes.jpg",
+        "price": 51
+      }
+
+    }
+  }
+};

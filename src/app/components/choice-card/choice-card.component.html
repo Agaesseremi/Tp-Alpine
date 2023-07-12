@@ -1,6 +1,9 @@
-<div *ngIf="displayCard" >
-<div *ngFor="let card of displayCard">
-  <h3>{{card.name}}</h3>
-  <p>{{card.basePrice}}</p>
-</div>
+<div *ngIf="displayCard" class="d-flex justify-content-center">
+  <div *ngFor="let card of displayCard | keyvalue" class="card col-3 mx-2 text-center">
+    <div class="card-body">
+      <img src="{{card.value.photoPath}}" alt="{{card.value.name}}_img" height="100">
+      <h3>{{card.value.name}}</h3>
+      <p>{{card.value.price}} €</p>
+    </div>
+  </div>
 </div>
