@@ -1,5 +1,7 @@
 import { Component, Output } from '@angular/core';
 import { alpineConfigJson } from '../../alpine-config/alpine-config.module';
+import { Store } from '@ngrx/store';
+import { IAlpineOptions, IAlpineState } from 'src/app/reducer/reducer';
 
 
 
@@ -10,10 +12,17 @@ import { alpineConfigJson } from '../../alpine-config/alpine-config.module';
 })
 export class ChoiceBarComponent {
   json: any = alpineConfigJson;
+  car!: IAlpineOptions;
   displayCard!: any;
 
+  constructor(private store: Store<{ alpine: IAlpineState }>) {
+
+  }
+
   ngOnInit() {
-   
+    this.store.select(state => state.alpine).subscribe((state) => {
+      this.car = state.car;
+    });
   }
 
   cardDisplay(test: string) {
@@ -25,10 +34,10 @@ export class ChoiceBarComponent {
         this.displayCard = this.json.colors;
         break;
       case 'rim':
-        this.displayCard = this.json.legendeRims;
+        this.displayCard = this.car.id == 1 ? this.json.legendeRims : this.json.pureRims;
         break;
       case 'interior':
-        this.displayCard = this.json.legendeInteriors;
+        this.displayCard = this.car.id == 1 ? this.json.legendeInteriors : this.json.pureInteriors;
         break;
     }
     

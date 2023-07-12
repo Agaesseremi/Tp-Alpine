@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { changeImage } from 'src/app/action/main.action';
-import { AlpineState } from 'src/app/reducer/reducer';
+import { IAlpineState } from 'src/app/reducer/reducer';
 
 @Component({
   selector: 'app-button-choice',
@@ -10,7 +10,7 @@ import { AlpineState } from 'src/app/reducer/reducer';
 })
 export class ButtonChoiceComponent {
 
-  constructor(private store: Store<{ alpine: AlpineState }>) {
+  constructor(private store: Store<{ alpine: IAlpineState }>) {
 
   }
 

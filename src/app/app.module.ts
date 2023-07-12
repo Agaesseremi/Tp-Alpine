@@ -9,7 +9,7 @@ import { ConfigAlpineBarComponent } from './components/config-alpine-bar/config-
 import { ChoiceBarComponent } from './components/choice-bar/choice-bar.component';
 import { ChoiceCardComponent } from './components/choice-card/choice-card.component';
 import { ViewImageComperatorComponent } from './components/view-image-comperator/view-image-comperator.component'
-import { Reducer } from './reducer/reducer';
+import { reducer } from './reducer/reducer';
 import { ButtonChoiceComponent } from './components/button-choice/button-choice.component';
 import { FooterComponent } from './components/footer/footer.component';
 
@@ -29,7 +29,7 @@ import { FooterComponent } from './components/footer/footer.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    StoreModule.forRoot({ alpine: Reducer }, {}),
+    StoreModule.forRoot({ alpine: reducer }, {}),
   ],
   providers: [],
   bootstrap: [AppComponent]
