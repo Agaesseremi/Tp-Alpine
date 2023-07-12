@@ -11,6 +11,7 @@ import { ChoiceCardComponent } from './components/choice-card/choice-card.compon
 import { ViewImageComperatorComponent } from './components/view-image-comperator/view-image-comperator.component'
 import { Reducer } from './reducer/reducer';
 import { ButtonChoiceComponent } from './components/button-choice/button-choice.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { ButtonChoiceComponent } from './components/button-choice/button-choice.
     ChoiceCardComponent,
     ViewImageComperatorComponent,
     ButtonChoiceComponent,
+    FooterComponent,
 
   ],
   imports: [
